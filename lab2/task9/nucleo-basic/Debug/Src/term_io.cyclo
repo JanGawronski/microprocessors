@@ -1,0 +1,8 @@
+../Src/term_io.c:8:5:xatoi	17
+../Src/term_io.c:63:6:xputc	1
+../Src/term_io.c:71:6:xputs	2
+../Src/term_io.c:80:6:xitoa	10
+../Src/term_io.c:116:6:xprintf	19
+../Src/term_io.c:171:6:put_dump	5
+../Src/term_io.c:192:6:get_line	6
+../Src/term_io.c:214:5:get_line_r	7
