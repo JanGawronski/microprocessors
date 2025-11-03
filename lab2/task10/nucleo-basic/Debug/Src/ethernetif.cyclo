@@ -1,0 +1,13 @@
+../Src/ethernetif.c:88:6:HAL_ETH_MspInit	2
+../Src/ethernetif.c:151:6:HAL_ETH_MspDeInit	2
+../Src/ethernetif.c:194:6:HAL_ETH_RxCpltCallback	1
+../Src/ethernetif.c:213:13:low_level_init	2
+../Src/ethernetif.c:331:14:low_level_output	6
+../Src/ethernetif.c:415:22:low_level_input	8
+../Src/ethernetif.c:504:6:ethernetif_input	5
+../Src/ethernetif.c:563:7:ethernetif_init	2
+../Src/ethernetif.c:610:7:sys_jiffies	1
+../Src/ethernetif.c:621:7:sys_now	1
+../Src/ethernetif.c:633:6:ethernetif_set_link	5
+../Src/ethernetif.c:674:6:ethernetif_update_config	7
+../Src/ethernetif.c:762:13:ethernetif_notify_conn_changed	1
