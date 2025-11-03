@@ -1,0 +1,8 @@
+../Src/term_io.c:8:5:xatoi	24	static
+../Src/term_io.c:63:6:xputc	16	static
+../Src/term_io.c:71:6:xputs	16	static
+../Src/term_io.c:80:6:xitoa	56	static
+../Src/term_io.c:116:6:xprintf	32	static
+../Src/term_io.c:171:6:put_dump	32	static
+../Src/term_io.c:192:6:get_line	24	static
+../Src/term_io.c:214:5:get_line_r	40	static
