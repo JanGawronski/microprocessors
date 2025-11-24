@@ -68,8 +68,8 @@ all: main-build
 main-build: stm32_lab_base_freertos.elf secondary-outputs
 
 # Tool invocations
-stm32_lab_base_freertos.elf stm32_lab_base_freertos.map: $(OBJS) $(USER_OBJS) /home/ada/Desktop/Dydaktyka_25/cwiczenie_freertos/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ada/Desktop/Dydaktyka_25/cwiczenie_freertos/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+stm32_lab_base_freertos.elf stm32_lab_base_freertos.map: $(OBJS) $(USER_OBJS) /home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

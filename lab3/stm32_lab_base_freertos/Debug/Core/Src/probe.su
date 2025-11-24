@@ -1,0 +1,3 @@
+../Core/Src/probe.c:10:6:probe_output_init	32	static
+../Core/Src/probe.c:39:6:probe_output_clear_all	8	static
+../Core/Src/probe.c:49:6:probe_output_set	16	static

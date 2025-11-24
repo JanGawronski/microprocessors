@@ -1,0 +1,31 @@
+14:46:09 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'messageTask':
+../Core/Src/main.c:83:35: warning: passing argument 1 of 'xQueueReceive' from incompatible pointer type [-Wincompatible-pointer-types]
+   83 |                 if (xQueueReceive(&queueHandler, &message, 10) == pdPASS)
+      |                                   ^~~~~~~~~~~~~
+      |                                   |
+      |                                   struct QueueDefinition **
+In file included from ../Core/Src/main.c:31:
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:868:41: note: expected 'QueueHandle_t' {aka 'struct QueueDefinition *'} but argument is of type 'struct QueueDefinition **'
+  868 | BaseType_t xQueueReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                           ~~~~~~~~~~~~~~^~~~~~
+../Core/Src/main.c:84:47: error: expected ';' before 'HAL_GPIO_WritePin'
+   84 |                         xprintf("%s", message)
+      |                                               ^
+      |                                               ;
+../Core/Src/main.c: In function 'ledTask':
+../Core/Src/main.c:106:34: warning: passing argument 1 of 'xQueueGenericSend' from incompatible pointer type [-Wincompatible-pointer-types]
+  106 |                   if (xQueueSend(&queueHandler, (void * ) &key, 100) != pdPASS)
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:479:80: note: in definition of macro 'xQueueSend'
+  479 | #define xQueueSend( xQueue, pvItemToQueue, xTicksToWait ) xQueueGenericSend( ( xQueue ), ( pvItemToQueue ), ( xTicksToWait ), queueSEND_TO_BACK )
+      |                                                                                ^~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:650:45: note: expected 'QueueHandle_t' {aka 'struct QueueDefinition *'} but argument is of type 'struct QueueDefinition **'
+  650 | BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) PRIVILEGED_FUNCTION;
+      |                               ~~~~~~~~~~~~~~^~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+
+14:46:09 Build Failed. 2 errors, 2 warnings. (took 165ms)
+
