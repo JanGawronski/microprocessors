@@ -104,7 +104,9 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  ../Inc/ethernetif.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h \
  ../Inc/usb_host.h ../Inc/dbgu.h ../Inc/ansi.h ../Inc/term_io.h \
- ../Inc/dbgu.h ../Inc/ansi.h
+ ../Inc/dbgu.h ../Inc/ansi.h ../Inc/usbh_platform.h ../Inc/usb_host.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/api.h \
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/netbuf.h
 ../Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Inc/stm32f4xx_hal_conf.h:
@@ -220,3 +222,7 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 ../Inc/term_io.h:
 ../Inc/dbgu.h:
 ../Inc/ansi.h:
+../Inc/usbh_platform.h:
+../Inc/usb_host.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/api.h:
+../Middlewares/Third_Party/LwIP/src/include/lwip/netbuf.h:

@@ -343,7 +343,7 @@ void StartDefaultTask(void const * argument)
         FRESULT res;
         UINT bw;
         FIL file;
-        const char* text = "Linijka tekstu!\n";
+        const char* text = "Wlasny tekst!\n";
         xprintf("f_open... ");
         res = f_open(&file,"0:/test.txt",FA_WRITE|FA_OPEN_APPEND);
         xprintf("res=%d\n",res);
