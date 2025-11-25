@@ -82,7 +82,7 @@ void messageTask(void* p){
 		
     uint8_t received;
 		if (xQueueReceive(queueHandler, &received, 10) == pdPASS)
-			xprintf("from queue got: %c", message)
+			xprintf("from queue got: %c", received);
 		// Udajemy powazne obliczenia (ta czesc zajmuje czas procesora)
 		LD1_ON;
 		uint32_t t;
@@ -94,6 +94,7 @@ void messageTask(void* p){
 		LD1_OFF;
 		//a teraz zadanie przestanie zajmowac czas procesora
 		vTaskDelayUntil( &xLastWakeTime, 1000 );
+        xLastWakeTime = xTaskGetTickCount();
 	}
 }
 

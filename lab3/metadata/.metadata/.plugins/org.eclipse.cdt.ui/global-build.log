@@ -1423,3 +1423,269 @@ In file included from ../Core/Src/main.c:31:
       |                               ~~~~~~~~~~~~~~^~~~~~
 make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
 "make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:22:09 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:77:1: error: unknown type name 'SemaphoreHandle_t'; did you mean 'xSemaphoreHandle'?
+   77 | SemaphoreHandle_t semaphoreHandler = NULL;
+      | ^~~~~~~~~~~~~~~~~
+      | xSemaphoreHandle
+../Core/Src/main.c:77:38: warning: initialization of 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   77 | SemaphoreHandle_t semaphoreHandler = NULL;
+      |                                      ^~~~
+../Core/Src/main.c: In function 'semTaskA':
+../Core/Src/main.c:80:9: warning: implicit declaration of function 'xSemaphoreTake'; did you mean 'xSemaphoreHandle'? [-Wimplicit-function-declaration]
+   80 |     if (xSemaphoreTake(semaphoreHandler, 10000) == pdTRUE) {
+      |         ^~~~~~~~~~~~~~
+      |         xSemaphoreHandle
+../Core/Src/main.c:84:7: warning: implicit declaration of function 'xSemaphoreGive'; did you mean 'xSemaphoreHandle'? [-Wimplicit-function-declaration]
+   84 |       xSemaphoreGive(semaphoreHandler);
+      |       ^~~~~~~~~~~~~~
+      |       xSemaphoreHandle
+../Core/Src/main.c: In function 'StartDefaultTask':
+../Core/Src/main.c:851:22: warning: implicit declaration of function 'xSemaphoreCreateBinary'; did you mean 'osSemaphoreCreate'? [-Wimplicit-function-declaration]
+  851 |   semaphoreHandler = xSemaphoreCreateBinary();
+      |                      ^~~~~~~~~~~~~~~~~~~~~~
+      |                      osSemaphoreCreate
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:23:38 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'messageTask':
+../Core/Src/main.c:85:55: error: 'message' undeclared (first use in this function); did you mean 'osMessageQ'?
+   85 |                         xprintf("from queue got: %c", message)
+      |                                                       ^~~~~~~
+      |                                                       osMessageQ
+../Core/Src/main.c:85:55: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:85:63: error: expected ';' before 'HAL_GPIO_WritePin'
+   85 |                         xprintf("from queue got: %c", message)
+      |                                                               ^
+      |                                                               ;
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:23:48 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'messageTask':
+../Core/Src/main.c:85:55: error: 'message' undeclared (first use in this function); did you mean 'osMessageQ'?
+   85 |                         xprintf("from queue got: %c", message);
+      |                                                       ^~~~~~~
+      |                                                       osMessageQ
+../Core/Src/main.c:85:55: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:23:58 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_freertos.elf
+ 
+arm-none-eabi-size  stm32_lab_base_freertos.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_freertos.elf  > "stm32_lab_base_freertos.list"
+   text	   data	    bss	    dec	    hex	filename
+  60368	    348	  79068	 139784	  22208	stm32_lab_base_freertos.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_freertos.list
+ 
+13:26:35 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_freertos.elf
+ 
+arm-none-eabi-size  stm32_lab_base_freertos.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_freertos.elf  > "stm32_lab_base_freertos.list"
+   text	   data	    bss	    dec	    hex	filename
+  60368	    348	  79068	 139784	  22208	stm32_lab_base_freertos.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_freertos.list
+ 
+13:27:10 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_freertos.elf
+ 
+arm-none-eabi-size  stm32_lab_base_freertos.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_freertos.elf  > "stm32_lab_base_freertos.list"
+   text	   data	    bss	    dec	    hex	filename
+  60368	    348	  79068	 139784	  22208	stm32_lab_base_freertos.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_freertos.list
+ 
+13:33:58 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'messageTask':
+../Core/Src/main.c:85:54: error: 'message' undeclared (first use in this function); did you mean 'osMessageQ'?
+   85 |                         xprintf("from queue got %c", message)
+      |                                                      ^~~~~~~
+      |                                                      osMessageQ
+../Core/Src/main.c:85:54: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:85:62: error: expected ';' before 'HAL_GPIO_WritePin'
+   85 |                         xprintf("from queue got %c", message)
+      |                                                              ^
+      |                                                              ;
+../Core/Src/main.c: In function 'ledTask':
+../Core/Src/main.c:109:9: warning: implicit declaration of function 'vTaskSupend'; did you mean 'vTaskSuspend'? [-Wimplicit-function-declaration]
+  109 |         vTaskSupend(messageTaskHandler);
+      |         ^~~~~~~~~~~
+      |         vTaskSuspend
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:34:09 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'ledTask':
+../Core/Src/main.c:109:9: warning: implicit declaration of function 'vTaskSupend'; did you mean 'vTaskSuspend'? [-Wimplicit-function-declaration]
+  109 |         vTaskSupend(messageTaskHandler);
+      |         ^~~~~~~~~~~
+      |         vTaskSuspend
+arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.0.202410170706/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `ledTask':
+/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/Debug/../Core/Src/main.c:109:(.text.ledTask+0x42): undefined reference to `vTaskSupend'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:72: stm32_lab_base_freertos.elf] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:34:17 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_freertos.elf
+ 
+arm-none-eabi-size  stm32_lab_base_freertos.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_freertos.elf  > "stm32_lab_base_freertos.list"
+   text	   data	    bss	    dec	    hex	filename
+  61008	    348	  79068	 140424	  22488	stm32_lab_base_freertos.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_freertos.list
+ 
+13:37:05 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'messageTask':
+../Core/Src/main.c:96:21: error: void value not ignored as it ought to be
+   96 |                 if (vTaskDelayUntil( &xLastWakeTime, 1000 ) == pdFALSE) {
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:97:38: warning: unused variable 'xLastWakeTime' [-Wunused-variable]
+   97 |                         portTickType xLastWakeTime = xTaskGetTickCount();
+      |                                      ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:37:21 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'messageTask':
+../Core/Src/main.c:96:21: error: void value not ignored as it ought to be
+   96 |                 if (vTaskDelayUntil( &xLastWakeTime, 1000 ) == pdFALSE) {
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:37:47 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'messageTask':
+../Core/Src/main.c:96:21: warning: implicit declaration of function 'xTaskDelayUntil'; did you mean 'vTaskDelayUntil'? [-Wimplicit-function-declaration]
+   96 |                 if (xTaskDelayUntil( &xLastWakeTime, 1000 ) == pdFALSE) {
+      |                     ^~~~~~~~~~~~~~~
+      |                     vTaskDelayUntil
+arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.0.202410170706/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `messageTask':
+/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/Debug/../Core/Src/main.c:96:(.text.messageTask+0x78): undefined reference to `xTaskDelayUntil'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:72: stm32_lab_base_freertos.elf] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:39:27 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_freertos.elf
+ 
+arm-none-eabi-size  stm32_lab_base_freertos.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_freertos.elf  > "stm32_lab_base_freertos.list"
+   text	   data	    bss	    dec	    hex	filename
+  61008	    348	  79068	 140424	  22488	stm32_lab_base_freertos.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_freertos.list
+ 
+13:42:57 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:77:1: error: unknown type name 'SemaphoreHandle_t'; did you mean 'xSemaphoreHandle'?
+   77 | SemaphoreHandle_t semaphoreHandler = NULL;
+      | ^~~~~~~~~~~~~~~~~
+      | xSemaphoreHandle
+../Core/Src/main.c:77:38: warning: initialization of 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   77 | SemaphoreHandle_t semaphoreHandler = NULL;
+      |                                      ^~~~
+../Core/Src/main.c: In function 'semTaskA':
+../Core/Src/main.c:80:9: warning: implicit declaration of function 'xSemaphoreTake'; did you mean 'xSemaphoreHandle'? [-Wimplicit-function-declaration]
+   80 |     if (xSemaphoreTake(semaphoreHandler, 10000) == pdTRUE) {
+      |         ^~~~~~~~~~~~~~
+      |         xSemaphoreHandle
+../Core/Src/main.c:84:7: warning: implicit declaration of function 'xSemaphoreGive'; did you mean 'xSemaphoreHandle'? [-Wimplicit-function-declaration]
+   84 |       xSemaphoreGive(semaphoreHandler);
+      |       ^~~~~~~~~~~~~~
+      |       xSemaphoreHandle
+../Core/Src/main.c: In function 'StartDefaultTask':
+../Core/Src/main.c:851:22: warning: implicit declaration of function 'xSemaphoreCreateBinary'; did you mean 'osSemaphoreCreate'? [-Wimplicit-function-declaration]
+  851 |   semaphoreHandler = xSemaphoreCreateBinary();
+      |                      ^~~~~~~~~~~~~~~~~~~~~~
+      |                      osSemaphoreCreate
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:43:30 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:32:10: fatal error: semaphore.h: No such file or directory
+   32 | #include "semaphore.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:44:54 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:77:1: error: unknown type name 'SemaphoreHandle_t'; did you mean 'xSemaphoreHandle'?
+   77 | SemaphoreHandle_t semaphoreHandler = NULL;
+      | ^~~~~~~~~~~~~~~~~
+      | xSemaphoreHandle
+../Core/Src/main.c:77:38: warning: initialization of 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   77 | SemaphoreHandle_t semaphoreHandler = NULL;
+      |                                      ^~~~
+../Core/Src/main.c: In function 'semTaskA':
+../Core/Src/main.c:80:9: warning: implicit declaration of function 'xSemaphoreTake'; did you mean 'xSemaphoreHandle'? [-Wimplicit-function-declaration]
+   80 |     if (xSemaphoreTake(semaphoreHandler, 10000) == pdTRUE) {
+      |         ^~~~~~~~~~~~~~
+      |         xSemaphoreHandle
+../Core/Src/main.c:84:7: warning: implicit declaration of function 'xSemaphoreGive'; did you mean 'xSemaphoreHandle'? [-Wimplicit-function-declaration]
+   84 |       xSemaphoreGive(semaphoreHandler);
+      |       ^~~~~~~~~~~~~~
+      |       xSemaphoreHandle
+../Core/Src/main.c: In function 'StartDefaultTask':
+../Core/Src/main.c:851:22: warning: implicit declaration of function 'xSemaphoreCreateBinary'; did you mean 'osSemaphoreCreate'? [-Wimplicit-function-declaration]
+  851 |   semaphoreHandler = xSemaphoreCreateBinary();
+      |                      ^~~~~~~~~~~~~~~~~~~~~~
+      |                      osSemaphoreCreate
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:47:42 **** Incremental Build of configuration Debug for project stm32_lab_base_freertos ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_freertos.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab3/stm32_lab_base_freertos/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_freertos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_freertos.elf
+ 
+arm-none-eabi-size  stm32_lab_base_freertos.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_freertos.elf  > "stm32_lab_base_freertos.list"
+   text	   data	    bss	    dec	    hex	filename
+  60792	    348	  79068	 140208	  223b0	stm32_lab_base_freertos.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_freertos.list
+ 

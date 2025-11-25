@@ -1,0 +1,8 @@
+../Src/main.c:439:6:StartDefaultTask	3
+../Src/main.c:400:13:ledTask	1
+../Src/main.c:412:13:messageTask	2
+../Src/main.c:107:6:HAL_GPIO_EXTI_Callback	1
+../Src/main.c:202:6:SystemClock_Config	3
+../Src/main.c:118:5:main	5
+../Src/main.c:490:6:HAL_TIM_PeriodElapsedCallback	2
+../Src/main.c:509:6:_Error_Handler	1

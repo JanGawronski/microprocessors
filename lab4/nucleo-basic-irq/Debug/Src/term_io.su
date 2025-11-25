@@ -1,8 +1,8 @@
-term_io.c:9:5:xatoi	16	static
-term_io.c:64:6:xputc	0	static
-term_io.c:72:6:xputs	8	static
-term_io.c:81:6:xitoa	48	static
-term_io.c:117:6:xprintf	24	static
-term_io.c:172:6:put_dump	24	static
-term_io.c:193:6:get_line	24	static
-term_io.c:215:5:get_line_r	24	static
+../Src/term_io.c:9:5:xatoi	16	static
+../Src/term_io.c:64:6:xputc	0	static
+../Src/term_io.c:72:6:xputs	8	static
+../Src/term_io.c:81:6:xitoa	48	static
+../Src/term_io.c:117:6:xprintf	24	static
+../Src/term_io.c:172:6:put_dump	24	static
+../Src/term_io.c:193:6:get_line	24	static
+../Src/term_io.c:215:5:get_line_r	24	static

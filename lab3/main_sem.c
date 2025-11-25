@@ -29,6 +29,7 @@
 #include "usbd_cdc_if.h"
 #include "probe.h"
 #include "queue.h"
+#include "semphr.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -77,26 +78,26 @@ TaskHandle_t semTaskBHandler = NULL;
 SemaphoreHandle_t semaphoreHandler = NULL;
 void semTaskA(void* p){
 	while(1) {
-    if (xSemaphoreTake(semaphoreHandler, 10000) == pdTRUE) {
-      LD2_ON;
-      vTaskDelay(100);
-      LD2_OFF;
-      xSemaphoreGive(semaphoreHandler);
-      vTaskDelay(200);
-    }
+		if (xSemaphoreTake(semaphoreHandler, 10000) == pdTRUE) {
+		  LD2_ON;
+		  vTaskDelay(100);
+		  LD2_OFF;
+		  xSemaphoreGive(semaphoreHandler);
+		  vTaskDelay(200);
+		}
 
 	}
 }
 
 void semTaskB(void* p){
 	while(1) {
-    if (xSemaphoreTake(semaphoreHandler, 10000) == pdTRUE) {
-      LD3_ON;
-      vTaskDelay(4000);
-      LD3_OFF;
-      xSemaphoreGive(semaphoreHandler);
-      vTaskDelay(1000);
-    }
+		if (xSemaphoreTake(semaphoreHandler, 10000) == pdTRUE) {
+		  LD3_ON;
+		  vTaskDelay(4000);
+		  LD3_OFF;
+		  xSemaphoreGive(semaphoreHandler);
+		  vTaskDelay(1000);
+		}
 	}
 }
 

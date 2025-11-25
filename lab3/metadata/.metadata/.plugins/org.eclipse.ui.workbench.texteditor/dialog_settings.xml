@@ -3,6 +3,7 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="+1"/>
 		<item value="ledtask"/>
 		<item value="default"/>
 		<item value="handle"/>
@@ -17,6 +18,5 @@
 		<item value="xTaskGetIdleTaskHandle"/>
 		<item value="messagetask"/>
 		<item value="taskhandle"/>
-		<item value="startde"/>
 	</list>
 </section>
