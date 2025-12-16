@@ -1,5 +1,6 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_ILI9341.h>
+#include<Fonts/FreeSansBold18pt7b.h>
 #define TFT_BACKLIGHT 10
 
 enum{
@@ -44,11 +45,15 @@ void setup() {
   //przygotowanie i wypisanie tekstu
   display->fillScreen(ILI9341_BLACK); //czyszczenie całego ekranu (na czarno;))
   display->setRotation(3); //orientacja/obrót obrazu pasująca do jego fizycznego ułożenia
-  display->setFont(NULL); //czcionka wbudowana (na razie)
-  display->setTextSize(3); //wybór rozmiaru tekstu
+  display->setFont(&FreeSansBold18pt7b); //czcionka wbudowana (na razie)
   display->setTextColor(ILI9341_RED); //kolor tekstu
   display->setCursor(10, 30); //ustawienie kursora (w pikselach)
   display->printf("ILI9341 Test\n"); //wypisanie komunikatu na wyświetlaczu
+  display->fillCircle(100, 100, 50, ILI9341_BLUE);
+  display->fillRect(200, 100, 50, 100, ILI9341_YELLOW);
+  display->fillRect(80, 180, 100, 50, ILI9341_RED);
+  display->fillTriangle(80, 180, 80, 229, 40, 229, ILI9341_RED);
+  display->fillTriangle(180, 180, 180, 229, 220, 229, ILI9341_RED);
 }
 
 void loop() {
