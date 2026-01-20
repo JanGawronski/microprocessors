@@ -1,0 +1,2 @@
+../Core/Src/us_delay.c:27:5:usdelay_Init	2
+../Core/Src/us_delay.c:60:6:usdelay	4

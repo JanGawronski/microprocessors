@@ -1,0 +1,8 @@
+../Core/Src/lcd/lcd_plot.c:17:5:lcdPlot	4
+../Core/Src/lcd/lcd_plot.c:41:13:drawPlot	35
+../Core/Src/lcd/lcd_plot.c:201:16:computeValueAtY	2
+../Core/Src/lcd/lcd_plot.c:219:12:computeYfromValue	3
+../Core/Src/lcd/lcd_plot.c:235:13:generateGrid	3
+../Core/Src/lcd/lcd_plot.c:264:16:lcdIntFixedPoint	6
+../Core/Src/lcd/lcd_plot.c:313:13:generateYAxis	4
+../Core/Src/lcd/lcd_plot.c:350:13:generateXAxis	2

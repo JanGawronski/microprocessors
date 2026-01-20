@@ -1,0 +1,15 @@
+../Core/Src/lcd/ili9341.c:53:10:ili9341_get_buf_ptr	1
+../Core/Src/lcd/ili9341.c:57:17:pixel_expand	9
+../Core/Src/lcd/ili9341.c:71:13:spi_write	1
+../Core/Src/lcd/ili9341.c:75:13:start_transfer	1
+../Core/Src/lcd/ili9341.c:79:13:end_transfer	1
+../Core/Src/lcd/ili9341.c:83:13:write_cmd	1
+../Core/Src/lcd/ili9341.c:89:13:write_data	1
+../Core/Src/lcd/ili9341.c:95:6:ili9341_reset	1
+../Core/Src/lcd/ili9341.c:106:6:ili9341_rotation	3
+../Core/Src/lcd/ili9341.c:138:6:ili9341_set_address	1
+../Core/Src/lcd/ili9341.c:166:16:select_box	1
+../Core/Src/lcd/ili9341.c:178:6:ili9341_update	3
+../Core/Src/lcd/ili9341.c:204:6:ili9341_disp_on	1
+../Core/Src/lcd/ili9341.c:208:13:reg_init	1
+../Core/Src/lcd/ili9341.c:355:5:ili9341_init	3
