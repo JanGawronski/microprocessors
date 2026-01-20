@@ -1,0 +1,7 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:nucleo-FreeRTOS.elf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:nucleo-basic-v3.elf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:nucleo-basic.elf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:nucleo-basic-v4.elf
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:nucleo-FreeRTOS.elf/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:nucleo-FreeRTOS.elf/activeLaunchTarget=null\:---

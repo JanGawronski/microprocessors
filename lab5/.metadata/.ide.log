@@ -1,0 +1,33 @@
+2026-01-09 14:27:49,790 [INFO] Activator:177 - 
+
+
+2026-01-09 14:27:49,791 [INFO] Activator:178 - !SESSION log4j initialized
+2026-01-09 14:48:08,364 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SWT SessionManagerDBus: Failed to UnregisterClient: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.xfce.SessionManager was not provided by any .service files
+2026-01-13 09:54:41,846 [INFO] Activator:177 - 
+
+
+2026-01-13 09:54:41,847 [INFO] Activator:178 - !SESSION log4j initialized
+2026-01-13 11:35:47,580 [INFO] Activator:177 - 
+
+
+2026-01-13 11:35:47,582 [INFO] Activator:178 - !SESSION log4j initialized
+2026-01-13 11:58:01,829 [INFO] Activator:177 - 
+
+
+2026-01-13 11:58:01,830 [INFO] Activator:178 - !SESSION log4j initialized
+2026-01-13 13:14:54,164 [INFO] Activator:177 - 
+
+
+2026-01-13 13:14:54,165 [INFO] Activator:178 - !SESSION log4j initialized
+2026-01-13 13:15:25,919 [INFO] Activator:177 - 
+
+
+2026-01-13 13:15:25,921 [INFO] Activator:178 - !SESSION log4j initialized
+2026-01-13 13:20:19,015 [INFO] Activator:177 - 
+
+
+2026-01-13 13:20:19,017 [INFO] Activator:178 - !SESSION log4j initialized
+2026-01-13 13:22:57,247 [INFO] Activator:177 - 
+
+
+2026-01-13 13:22:57,248 [INFO] Activator:178 - !SESSION log4j initialized
