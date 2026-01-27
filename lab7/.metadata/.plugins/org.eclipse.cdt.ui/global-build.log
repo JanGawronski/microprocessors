@@ -192,3 +192,229 @@ Finished building: default.size.stdout
  
 Finished building: stm32_lab_base_serial.list
  
+14:08:46 **** Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87224	    348	 142468	 230040	  38298	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:22:37 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87400	    348	 142468	 230216	  38348	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:23:53 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87432	    348	 142468	 230248	  38368	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:24:36 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87432	    348	 142468	 230248	  38368	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:27:50 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87224	    348	 142468	 230040	  38298	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:29:54 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87400	    348	 142468	 230216	  38348	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:30:07 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87400	    348	 142468	 230216	  38348	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:30:39 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87128	    348	 142468	 229944	  38238	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:34:40 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87496	    348	 142468	 230312	  383a8	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:35:10 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87400	    348	 142468	 230216	  38348	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:37:04 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87432	    348	 142468	 230248	  38368	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:37:49 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_tx_polling':
+../Core/Src/main.c:833:1: error: unknown type name 's'
+  833 | s
+      | ^
+../Core/Src/main.c:834:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 't'
+  834 |         uint16_t t = (uint16_t)(10000 / 24);
+      |                  ^
+../Core/Src/main.c:836:17: error: 't' undeclared (first use in this function)
+  836 |         usdelay(t);
+      |                 ^
+../Core/Src/main.c:836:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+14:37:54 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87400	    348	 142468	 230216	  38348	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:38:24 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87128	    348	 142468	 229944	  38238	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:38:50 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87400	    348	 142468	 230216	  38348	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 
+14:40:30 **** Incremental Build of configuration Debug for project stm32_lab_base_serial ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stm32_lab_base_serial.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/student/Dokumenty/user1/lab7/stm32_lab_base_serial/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_lab_base_serial.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_lab_base_serial.elf
+ 
+arm-none-eabi-size  stm32_lab_base_serial.elf 
+arm-none-eabi-objdump -h -S stm32_lab_base_serial.elf  > "stm32_lab_base_serial.list"
+   text	   data	    bss	    dec	    hex	filename
+  87400	    348	 142468	 230216	  38348	stm32_lab_base_serial.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_lab_base_serial.list
+ 

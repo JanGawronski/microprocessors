@@ -16,3 +16,18 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-01-20 13:23:57.036
 !MESSAGE Indexed 'stm32_lab_base_serial' (60 sources, 187 headers) in 3.38 sec: 22,134 declarations; 117,876 references; 1 unresolved inclusions; 202 syntax errors; 241 unresolved names (0.17%)
+!SESSION 2026-01-27 14:07:56.438 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /home/student/Dokumenty/user1/lab7/
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-01-27 14:07:59.295
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-01-27 14:07:59.296
+!MESSAGE Log4j2 initialized with config file /home/student/Dokumenty/user1/lab7/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-01-27 14:08:01.078
+!MESSAGE Started RMI Server, listening on port 41337

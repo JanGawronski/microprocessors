@@ -1320,3 +1320,396 @@ Finished building: nucleo-basic-v4.bin
  
 arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
  
+14:51:31 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  82996	    160	  73368	 156524	  2636c	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+14:52:16 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'createFile':
+../Src/main.c:408:8: warning: unused variable 'bw' [-Wunused-variable]
+  408 |   UINT bw;
+      |        ^~
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  82896	    160	  73368	 156424	  26308	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+14:53:03 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  82800	    160	  73368	 156328	  262a8	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+14:53:49 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  82800	    160	  73368	 156328	  262a8	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+11:43:35 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  82800	    160	  73368	 156328	  262a8	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+11:43:37 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  82800	    160	  73368	 156328	  262a8	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+11:44:02 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  82800	    160	  73368	 156328	  262a8	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+11:45:03 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  82800	    160	  73368	 156328	  262a8	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+12:12:40 **** Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'createFile':
+../Src/main.c:408:16: error: 'FA_OK' undeclared (first use in this function); did you mean 'FR_OK'?
+  408 |  if (result != FA_OK){
+      |                ^~~~~
+      |                FR_OK
+../Src/main.c:408:16: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:411:13: error: assignment to expression with array type
+  411 |   fs_buffer = "Kot dalej jest na pendrive\n";
+      |             ^
+../Src/main.c:413:27: error: 'fs_buffor' undeclared (first use in this function); did you mean 'fs_buffer'?
+  413 |   result = f_write(&file, fs_buffor, strlen(fs_buffer), &bytes_written);
+      |                           ^~~~~~~~~
+      |                           fs_buffer
+../Src/main.c:413:45: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  413 |   result = f_write(&file, fs_buffor, strlen(fs_buffer), &bytes_written);
+      |                                             ^~~~~~~~~
+      |                                             |
+      |                                             uint8_t * {aka unsigned char *}
+In file included from ../Inc/usbh_conf.h:55,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:37,
+                 from ../Inc/ffconf.h:56,
+                 from ../Middlewares/Third_Party/FatFs/src/ff.h:29,
+                 from ../Inc/fatfs.h:56,
+                 from ../Src/main.c:53:
+/opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Src/main.c:415:13: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  415 |   if(strlen(fs_buffer) != bytes_written){
+      |             ^~~~~~~~~
+      |             |
+      |             uint8_t * {aka unsigned char *}
+In file included from ../Inc/usbh_conf.h:55,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:37,
+                 from ../Inc/ffconf.h:56,
+                 from ../Middlewares/Third_Party/FatFs/src/ff.h:29,
+                 from ../Inc/fatfs.h:56,
+                 from ../Src/main.c:53:
+/opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+make[1]: *** [Src/subdir.mk:64: Src/main.o] Error 1
+make: *** [makefile:75: all] Error 2
+"make all" terminated with exit code 2. Build might be incomplete.
+12:13:59 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'createFile':
+../Src/main.c:411:13: error: expected expression before ']' token
+  411 |   fs_buffer[] = "Kot dalej jest na pendrive\n";
+      |             ^
+../Src/main.c:413:45: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  413 |   result = f_write(&file, fs_buffer, strlen(fs_buffer), &bytes_written);
+      |                                             ^~~~~~~~~
+      |                                             |
+      |                                             uint8_t * {aka unsigned char *}
+In file included from ../Inc/usbh_conf.h:55,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:37,
+                 from ../Inc/ffconf.h:56,
+                 from ../Middlewares/Third_Party/FatFs/src/ff.h:29,
+                 from ../Inc/fatfs.h:56,
+                 from ../Src/main.c:53:
+/opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Src/main.c:415:13: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  415 |   if(strlen(fs_buffer) != bytes_written){
+      |             ^~~~~~~~~
+      |             |
+      |             uint8_t * {aka unsigned char *}
+In file included from ../Inc/usbh_conf.h:55,
+                 from ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:37,
+                 from ../Inc/ffconf.h:56,
+                 from ../Middlewares/Third_Party/FatFs/src/ff.h:29,
+                 from ../Inc/fatfs.h:56,
+                 from ../Src/main.c:53:
+/opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/arm-none-eabi/include/string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Src/main.c:419:17: error: 'FA_OK' undeclared (first use in this function); did you mean 'FR_OK'?
+  419 |   if (result != FA_OK){
+      |                 ^~~~~
+      |                 FR_OK
+../Src/main.c:419:17: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [Src/subdir.mk:64: Src/main.o] Error 1
+make: *** [makefile:75: all] Error 2
+"make all" terminated with exit code 2. Build might be incomplete.
+12:15:13 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  81628	    160	  73368	 155156	  25e14	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+12:17:58 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  81636	    160	  73368	 155164	  25e1c	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+12:20:36 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  81640	    160	  73368	 155168	  25e20	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+12:26:46 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  81864	    160	  73368	 155392	  25f00	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+12:37:33 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  81864	    160	  73368	 155392	  25f00	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+12:38:10 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  82100	    160	  73368	 155628	  25fec	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+12:50:52 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  83056	    160	  73368	 156584	  263a8	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+12:52:03 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  83060	    160	  73368	 156588	  263ac	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 
+13:03:23 **** Incremental Build of configuration Debug for project nucleo-basic-v4 ****
+make all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Inc -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'measureTime':
+../Src/main.c:534:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'TickType_t' {aka 'long unsigned int'} [-Wformat=]
+  534 |  xprintf("Write time %d\n", write - start);
+      |                      ~^     ~~~~~~~~~~~~~
+      |                       |           |
+      |                       int         TickType_t {aka long unsigned int}
+      |                      %ld
+../Src/main.c:535:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'TickType_t' {aka 'long unsigned int'} [-Wformat=]
+  535 |  xprintf("Read time %d\n", read - write);
+      |                     ~^     ~~~~~~~~~~~~
+      |                      |          |
+      |                      int        TickType_t {aka long unsigned int}
+      |                     %ld
+../Src/main.c:535:2: warning: 'write' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  535 |  xprintf("Read time %d\n", read - write);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "nucleo-basic-v4.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F429ZI_FLASH.ld" --specs=nosys.specs -Wl,-Map="nucleo-basic-v4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nucleo-basic-v4.elf
+ 
+arm-none-eabi-size   nucleo-basic-v4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  83292	    160	  73368	 156820	  26494	nucleo-basic-v4.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  nucleo-basic-v4.elf  > "nucleo-basic-v4.list"
+Finished building: nucleo-basic-v4.list
+ 
+arm-none-eabi-objcopy  -O binary  nucleo-basic-v4.elf  "nucleo-basic-v4.bin"
+Finished building: nucleo-basic-v4.bin
+ 
+arm-none-eabi-objcopy -O ihex "nucleo-basic-v4.elf" "nucleo-basic-v4.hex"
+ 

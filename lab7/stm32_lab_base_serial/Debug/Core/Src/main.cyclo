@@ -11,9 +11,9 @@
 ../Core/Src/main.c:603:13:MX_DMA_Init	1
 ../Core/Src/main.c:627:13:MX_GPIO_Init	1
 ../Core/Src/main.c:774:6:terminal_iface	10
-../Core/Src/main.c:806:6:uart6_lab_irq_handler	1
-../Core/Src/main.c:819:13:uart_tx_polling	3
-../Core/Src/main.c:841:13:uart_rx_polling	2
-../Core/Src/main.c:861:6:StartDefaultTask	1
-../Core/Src/main.c:917:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:935:6:Error_Handler	1
+../Core/Src/main.c:807:6:uart6_lab_irq_handler	1
+../Core/Src/main.c:820:13:uart_tx_polling	3
+../Core/Src/main.c:857:13:uart_rx_polling	2
+../Core/Src/main.c:877:6:StartDefaultTask	1
+../Core/Src/main.c:933:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:951:6:Error_Handler	1
